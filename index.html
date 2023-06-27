@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Вычислитель максимального числа</title>
+ </head>
+ <body>
+	<label>Введите первое число<br>
+		<input id="input_a" value="" placeholder="20" type="text">
+	</label>
+	<br><br>
+	<label>Введите второе число<br>
+		<input id="input_b" value="" placeholder="20" type="text">
+	</label>
+	<br><br>
+	<label>Введите третье число<br>
+		<input id="input_c" value="" placeholder="20" type="text">
+	</label>
+	<br><br>
+	<label>
+		<input value="Вычислить" type="button" onCLICK="event.preventDefault(); MaxNumber()">
+	</label>
+	<br>
+	<div id="answer">
+		Ответ:
+	</div>
+	<script>
+		function MaxNumber() {
+			let a = document.getElementById("input_a").value;
+			let b = document.getElementById("input_b").value;
+			let c = document.getElementById("input_c").value;
+			let max = a;
+			if (b > max) {
+				max = b;
+			}
+			if (c > max) {
+				max = c;
+			}
+			document.getElementById("answer").innerHTML = max;
+		}
+	</script>
+ </body>
+</html>
